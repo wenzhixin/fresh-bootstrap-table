@@ -39,7 +39,7 @@
   <!-- Open Graph data -->
   <meta property="og:title" content="Fresh Bootstrap Table by Creative Tim" />
   <meta property="og:type" content="article" />
-  <meta property="og:url" content="http://demos.creative-tim.com/fresh-bootstrap-table" />
+  <meta property="og:url" content="https://wenzhixin.github.io/fresh-bootstrap-table/full-screen-table.html" />
   <meta property="og:image" content="http://s3.amazonaws.com/creativetim_bucket/products/31/original/opt_fbt_thumbnail.jpg"/>
   <meta property="og:description" content="Probably the most beautiful and complex bootstrap table you've ever seen on the internet, this bootstrap table is one of the essential plugins you will need." />
   <meta property="og:site_name" content="Creative Tim" />
@@ -1035,8 +1035,7 @@
   $('#sharrreTitle').sharrre({
     share: {
       twitter: true,
-      facebook: true,
-      googlePlus: true
+      facebook: true
     },
     template: '',
     enableHover: false,
@@ -1045,7 +1044,7 @@
       $("#sharrreTitle").html('Thank you for ' + options.total + ' shares!')
     },
     enableTracking: true,
-    url: 'http://demos.creative-tim.com/fresh-bootstrap-table'
+    url: location.href
   })
 
   $('#twitter').sharrre({
@@ -1060,7 +1059,7 @@
       api.openPopup('twitter')
     },
     template: '<i class="fa fa-twitter"></i> {total}',
-    url: 'http://demos.creative-tim.com/fresh-bootstrap-table'
+    url: location.href
   })
 
   $('#facebook').sharrre({
@@ -1074,7 +1073,7 @@
       api.openPopup('facebook')
     },
     template: '<i class="fa fa-facebook-square"></i> {total}',
-    url: 'http://demos.creative-tim.com/fresh-bootstrap-table'
+    url: location.href
   })
 </script>
 
