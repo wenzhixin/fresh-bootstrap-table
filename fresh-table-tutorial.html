@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>Fresh Bootstrap Table by Creative Tim</title>
+
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+  <!-- Canonical SEO -->
+  <link rel="canonical" href="https://www.creative-tim.com/product/fresh-bootstrap-table"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="assets/css/fresh-bootstrap-table.css" rel="stylesheet" />
+  <link href="assets/css/demo.css" rel="stylesheet" />
+
+  <!--   Fonts and icons   -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table/dist/bootstrap-table.js"></script>
+
+  <!--  Just for demo purpose, do not include in your project   -->
+  <script src="assets/js/demo/gsdk-switch.js"></script>
+  <script src="assets/js/demo/jquery.sharrre.js"></script>
+  <script src="assets/js/demo/demo.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+
+  <style>
+    body{
+      color: #FFFFFF;
+    }
+    .logo-container .brand{
+      color: #FFFFFF;
+    }
+    a{
+      color: #555555;
+    }
+    a:hover,
+    a:focus{
+      color: #444;
+    }
+    .fa-heart{
+      color: #F74933;
+    }
+    .space-100{
+      height: 100px;
+      display: block;
+    }
+    .space-50{
+      height: 50px;
+      display: block;
+    }
+    pre.prettyprint{
+      background-color: #444;
+      border: 1px solid #343434;
+      margin-top: 20px;
+      padding: 20px;
+      text-align: left;
+    }
+    .atv, .str{
+      color: #25C6EC;
+    }
+    .tag, .pln, .kwd{
+       color: #7A8CB2;
+    }
+    .atn{
+      color: #2C93FF;
+    }
+    .pln{
+       color: #EEEEEE;
+    }
+    .com{
+      color: #999;
+    }
+    .pun, .opn, .clo {
+      color: #C3C3C3;
+    }
+    .btn-neutral.btn-fill, .btn-neutral.btn-fill:hover, .btn-neutral.btn-fill:focus{
+      color: #555555;
+    }
+
+  </style>
+</head>
+
+<body>
+  <a href="http://creative-tim.com">
+    <div class="logo-container">
+      <div class="logo">
+        <img src="assets/img/new_logo.png">
+      </div>
+      <div class="brand">
+        Creative Tim
+      </div>
+    </div>
+  </a>
+
+  <div class="main">
+    <div class="container tim-container" style="max-width:800px; padding-top:100px">
+      <h1 class="text-center">Fresh Bootstrap Table - Tutorial<br>
+        <small>This tutorial was made to make the integration as easy as possible.</small>
+      </h1>
+      <div class="col-md-12">
+      <br>
+      <h4>
+        We restyled the classic Bootstrap Table and made it look fresh and bright. Here are the files that you need to add in your project.
+      </h4>
+
+      <pre class="prettyprint">
+
+  &lt;head&gt;
+
+  &lt;!-- Style --&gt;
+  &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+  &lt;link href=&quot;assets/css/fresh-bootstrap-table.css&quot; rel=&quot;stylesheet&quot; /&gt;
+
+  &lt;!-- Fonts and icons --&gt;
+  &lt;link href=&quot;https://use.fontawesome.com/releases/v5.6.3/css/all.css&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;link href=&quot;http://fonts.googleapis.com/css?family=Roboto:400,700,300&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+
+  &lt;/head&gt;
+      </pre>
+
+      <br>
+      <h4>
+        This is the main HTML code for the Fresh Bootstrap Table. You can create a table with any data or whatever you want. More details about the methods, data manipulations or functions available with this Bootstrap Table can be found <a href="https://bootstrap-table.com">here.</a>
+      </h4>
+      <pre class="prettyprint">
+&lt;div class=&quot;fresh-table full-color-orange&quot;&gt;
+  &lt;!--
+    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange
+    Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
+  --&gt;
+
+  &lt;div class=&quot;toolbar&quot;&gt;
+    &lt;button id=&quot;alertBtn&quot; class=&quot;btn btn-default&quot;&gt;Alert&lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;table id=&quot;fresh-table&quot; class=&quot;table&quot;&gt;
+    &lt;thead&gt;
+      &lt;th data-field=&quot;id&quot;&gt;ID&lt;/th&gt;
+      &lt;th data-field=&quot;name&quot;&gt;Name&lt;/th&gt;
+      &lt;th data-field=&quot;salary&quot;&gt;Salary&lt;/th&gt;
+      &lt;th data-field=&quot;country&quot;&gt;Country&lt;/th&gt;
+      &lt;th data-field=&quot;city&quot;&gt;City&lt;/th&gt;
+      &lt;th data-field=&quot;actions&quot; data-formatter=&quot;operateFormatter&quot; data-events=&quot;operateEvents&quot;&gt;Actions&lt;/th&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;Dakota Rice&lt;/td&gt;
+        &lt;td&gt;$36,738&lt;/td&gt;
+        &lt;td&gt;Niger&lt;/td&gt;
+        &lt;td&gt;Oud-Turnhout&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;Minerva Hooper&lt;/td&gt;
+        &lt;td&gt;$23,789&lt;/td&gt;
+        &lt;td&gt;Cura&ccedil;ao&lt;/td&gt;
+        &lt;td&gt;Sinaai-Waas&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;Sage Rodriguez&lt;/td&gt;
+        &lt;td&gt;$56,142&lt;/td&gt;
+        &lt;td&gt;Netherlands&lt;/td&gt;
+        &lt;td&gt;Baileux&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;4&lt;/td&gt;
+        &lt;td&gt;Philip Chaney&lt;/td&gt;
+        &lt;td&gt;$38,735&lt;/td&gt;
+        &lt;td&gt;Korea, South&lt;/td&gt;
+        &lt;td&gt;Overland Park&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;5&lt;/td&gt;
+        &lt;td&gt;Doris Greene&lt;/td&gt;
+        &lt;td&gt;$63,542&lt;/td&gt;
+        &lt;td&gt;Malawi&lt;/td&gt;
+        &lt;td&gt;Feldkirchen in K&auml;rnten&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;6&lt;/td&gt;
+        &lt;td&gt;Mason Porter&lt;/td&gt;
+        &lt;td&gt;$78,615&lt;/td&gt;
+        &lt;td&gt;Chile&lt;/td&gt;
+        &lt;td&gt;Gloucester&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;7&lt;/td&gt;
+        &lt;td&gt;Alden Chen&lt;/td&gt;
+        &lt;td&gt;$63,929&lt;/td&gt;
+        &lt;td&gt;Finland&lt;/td&gt;
+        &lt;td&gt;Gary&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;8&lt;/td&gt;
+        &lt;td&gt;Colton Hodges&lt;/td&gt;
+        &lt;td&gt;$93,961&lt;/td&gt;
+        &lt;td&gt;Nicaragua&lt;/td&gt;
+        &lt;td&gt;Delft&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;9&lt;/td&gt;
+        &lt;td&gt;Illana Nelson&lt;/td&gt;
+        &lt;td&gt;$56,142&lt;/td&gt;
+        &lt;td&gt;Heard Island&lt;/td&gt;
+        &lt;td&gt;Montone&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;10&lt;/td&gt;
+        &lt;td&gt;Nicole Lane&lt;/td&gt;
+        &lt;td&gt;$93,148&lt;/td&gt;
+        &lt;td&gt;Cayman Islands&lt;/td&gt;
+        &lt;td&gt;Cottbus&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;11&lt;/td&gt;
+        &lt;td&gt;Chaim Saunders&lt;/td&gt;
+        &lt;td&gt;$5,502&lt;/td&gt;
+        &lt;td&gt;Romania&lt;/td&gt;
+        &lt;td&gt;New Quay&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;12&lt;/td&gt;
+        &lt;td&gt;Josiah Simon&lt;/td&gt;
+        &lt;td&gt;$50,265&lt;/td&gt;
+        &lt;td&gt;Christmas Island&lt;/td&gt;
+        &lt;td&gt;Sint-Jans-Molenbeek&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;13&lt;/td&gt;
+        &lt;td&gt;Ila Poole&lt;/td&gt;
+        &lt;td&gt;$67,413&lt;/td&gt;
+        &lt;td&gt;Montenegro&lt;/td&gt;
+        &lt;td&gt;Pontevedra&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;14&lt;/td&gt;
+        &lt;td&gt;Shana Mejia&lt;/td&gt;
+        &lt;td&gt;$58,566&lt;/td&gt;
+        &lt;td&gt;Afghanistan&lt;/td&gt;
+        &lt;td&gt;Ballarat&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;15&lt;/td&gt;
+        &lt;td&gt;Lana Ryan&lt;/td&gt;
+        &lt;td&gt;$64,151&lt;/td&gt;
+        &lt;td&gt;Martinique&lt;/td&gt;
+        &lt;td&gt;Portobuffol&egrave;&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;16&lt;/td&gt;
+        &lt;td&gt;Daquan Bender&lt;/td&gt;
+        &lt;td&gt;$91,906&lt;/td&gt;
+        &lt;td&gt;Sao Tome and Principe&lt;/td&gt;
+        &lt;td&gt;Walhain-Saint-Paul&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;17&lt;/td&gt;
+        &lt;td&gt;Connor Wagner&lt;/td&gt;
+        &lt;td&gt;$86,537&lt;/td&gt;
+        &lt;td&gt;Germany&lt;/td&gt;
+        &lt;td&gt;Solihull&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;18&lt;/td&gt;
+        &lt;td&gt;Boris Horton&lt;/td&gt;
+        &lt;td&gt;$35,094&lt;/td&gt;
+        &lt;td&gt;Laos&lt;/td&gt;
+        &lt;td&gt;Saint-Mard&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;19&lt;/td&gt;
+        &lt;td&gt;Winifred Ryan&lt;/td&gt;
+        &lt;td&gt;$64,436&lt;/td&gt;
+        &lt;td&gt;Ireland&lt;/td&gt;
+        &lt;td&gt;Ronciglione&lt;/td&gt;
+        &lt;td&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+
+      </pre>
+
+      <br>
+      <h4>
+        Here are the javascript files that you have to include and the Javascript plugin that you have to call in your page. The core code for the Fresh Bootstrap Table can be found in the 'bootstrap-table.js'. Here is the code for initialising the table in your page:
+      </h4>
+      <pre class="prettyprint">
+
+&lt;!-- Javascript --&gt;
+&lt;script src=&quot;https://code.jquery.com/jquery-3.3.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/bootstrap-table/dist/bootstrap-table.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+  var $table = $('#fresh-table')
+  var $alertBtn = $('#alertBtn')
+
+  window.operateEvents = {
+    'click .like': function (e, value, row, index) {
+      alert('You click like icon, row: ' + JSON.stringify(row))
+      console.log(value, row, index)
+    },
+    'click .edit': function (e, value, row, index) {
+      alert('You click edit icon, row: ' + JSON.stringify(row))
+      console.log(value, row, index)
+    },
+    'click .remove': function (e, value, row, index) {
+      $table.bootstrapTable('remove', {
+        field: 'id',
+        values: [row.id]
+      })
+    }
+  }
+
+  function operateFormatter(value, row, index) {
+    return [
+      '&lt;a rel="tooltip" title="Like" class="table-action like" href="javascript:void(0)" title="Like">',
+        '&lt;i class="fa fa-heart">&lt;/i>',
+      '&lt;/a>',
+      '&lt;a rel="tooltip" title="Edit" class="table-action edit" href="javascript:void(0)" title="Edit">',
+        '&lt;i class="fa fa-edit">&lt;/i>',
+      '&lt;/a>',
+      '&lt;a rel="tooltip" title="Remove" class="table-action remove" href="javascript:void(0)" title="Remove">',
+        '&lt;i class="fa fa-remove">&lt;/i>',
+      '&lt;/a>'
+    ].join('')
+  }
+
+  $(function () {
+    $table.bootstrapTable({
+      classes: 'table table-hover table-striped',
+      toolbar: '.toolbar',
+
+      search: true,
+      showRefresh: true,
+      showToggle: true,
+      showColumns: true,
+      pagination: true,
+      striped: true,
+      sortable: true,
+      pageSize: 8,
+      pageList: [8, 10, 25, 50, 100],
+
+      formatShowingRows: function (pageFrom, pageTo, totalRows) {
+        return ''
+      },
+      formatRecordsPerPage: function (pageNumber) {
+        return pageNumber + ' rows visible'
+      }
+    })
+
+    $alertBtn.click(function () {
+      alert('You pressed on Alert')
+    })
+  })
+
+&lt;/script&gt;
+
+      </pre>
+
+      <h4>
+        Besides the default style, we added 5 new colors for the background of Fresh Bootstrap Table and for it's Toolbar: <b>blue</b>, <b>azure</b>, <b>green</b>, <b>orange</b>, <b>red</b>. If you want to use one of them, you can use the class for the chosen color: "full-color-{<b>blue | azure | green | orange | red</b>}" or "toolbar-color-{<b>blue | azure | green | orange | red</b>}".
+        <br><br>
+        If you want to use the table as Full Screen you have to add the class "<b>full-screen-table</b>" for the save "<b>div</b>" that has the class "<b>fresh-table</b>".
+      </h4>
+
+      <h4>Many thanks to our friend for open sourcing the base for this Bootstrap Table. More details can be found here <a href="https://bootstrap-table.com">here.</a>
+      </h4>
+      <h4>Get more useful items for Bootstrap on <a href="http://creative-tim.com">Creative Tim.</a></h4>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+      <div class="space-50"></div>
+        <a href="http://creative-tim.com/product/fresh-bootstrap-table" class="btn btn-neutral btn-fill btn-lg btn-block">Free Download</a>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+  <div class="space-100"></div>
+  <p class="text-center">Copyright &copy; 2019 <a href="http://creative-tim.com">Creative Tim</a>, made with <i class="fa fa-heart"></i> for a better web.</p>
+<!-- end container -->
+</div>
+<!-- end main -->
+
+</body>
+</html>
